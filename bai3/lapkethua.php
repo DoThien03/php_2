@@ -45,7 +45,7 @@ class HocSinh extends ConNguoi
     }
     public function hienThiThongTin()
     {
-        echo "Tên: " . $this->hoTen . "<br>" . "Địa chỉ:  " . $this->diaChi . "<br>" . " Năm Sinh: " . $this->namSinh . "<br>" . "Email:  " . $this->email . "<br>" . " SĐT "  . $this->sdt . "Điểm TB: " . $this->diemTB() . "<br>";
+        echo "Tên: " . $this->hoTen . "<br>" . "Địa chỉ:  " . $this->diaChi . "<br>" . " Năm Sinh: " . $this->namSinh . "<br>" . "Email:  " . $this->email . "<br>" . " SĐT "  . $this->sdt . "<br>" . "Điểm TB: " . $this->diemTB() . "<br>";
     }
 }
 
@@ -72,31 +72,12 @@ class GiangVien extends ConNguoi
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $cn = new ConNguoi('Thiên', 'Nam Định', 2003, 'thiendepzai@gmail.com', 7372836);
 $cn->hienThiThongTin();
 
-$hs = new HocSinh('Thiên', 'Nam Định', 2003, 'thiendepzai@gmail.com', 7372836, 7, 8, 9);
+$hs = new HocSinh('Thiên đẹp zai ', 'Nam Định', 2003, 'thiendepzai@gmail.com', 7372836, 7, 8, 9);
 $hs->hienThiThongTin();
 
 
-$gv = new GiangVien('Thiên', 'Nam Định', 2003, 'thiendepzai@gmail.com', 7372836, 15, 180);
+$gv = new GiangVien('Thiên đẹp zai vãi ò', 'Nam Định', 2003, 'thiendepzai@gmail.com', 7372836, 15, 180);
 $gv->hienThiThongTin();

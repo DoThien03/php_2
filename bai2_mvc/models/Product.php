@@ -1,15 +1,35 @@
 <?php
 require_once "db.php";
-function getListProduct()
-{
-    $sql = "select * from productS";
-    return getData($sql);
-}
 
-//
-function deleteProduct($id)
+class Product extends db
 {
-    $sql = "DELETE FROM products where  id = $id";
-    getData($sql, false); // câu lệnh thêm sửa xóa thì chỉ cần truyền
-    // false vào là được
+    public  function listProduct()
+    {
+        $sql = "SELECT * FROM products";
+        return $this->getData($sql);
+    }
+    public  function addProduct($name, $price)
+    {
+        $sql = "INSERT INTO products (name, price) VALUE ('$name', '$price')";
+        return $this->getData($sql, false);
+    }
+
+    public function getOneProduct($id)
+    {
+        $sql = "SELECT * FROM products WHERE id = $id";
+        return $this->getData($sql, false);
+    }
+
+    public function updateProduct($id, $name, $price)
+    {
+        $sql = "UPDATE products SET name='$name', price='$price' WHERE id = $id";
+        return $this->getData($sql, false);
+    }
+
+    public function deleteProduct($id)
+    {
+        $sql = "DELETE FROM products where  id = $id";
+        $this->getData($sql, false); // câu lệnh thêm sửa xóa thì chỉ cần truyền
+        // false vào là được
+    }
 }
