@@ -1,11 +1,11 @@
 <?php
 
-namespace Controllers;
+namespace App\Models;
 
 class Customer
 {
     public function __construct()
     {
-        echo "Đây là Customer Controller";
+        echo "Đây là customer model";
     }
 }
