@@ -11,5 +11,8 @@
             "email": "dothien.dvt.2508@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phroute/phroute": "^2.2",
+        "eftec/bladeone": "^4.9"
+    }
 }
